@@ -6,8 +6,9 @@
  *   Max ops: 4
  *   Rating: 1
  */
-int tmin(void) {
-#error TODO: Return the minimum 32-bit two's-complement integer
+int tmin(void){
+  //有符号数
+  return 1 << 31;
 }
 
 int main(void) {

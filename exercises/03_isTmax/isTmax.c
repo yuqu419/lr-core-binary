@@ -8,7 +8,7 @@
  *   Rating: 1
  */
 int isTmax(int x) {
-#error TODO: Return 1 only when x is the maximum 32-bit two's-complement integer
+  return (~(1 << 31)) == x;
 }
 
 int main(void) {

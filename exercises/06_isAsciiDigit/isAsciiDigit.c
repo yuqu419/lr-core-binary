@@ -9,7 +9,9 @@
  *   Rating: 3
  */
 int isAsciiDigit(int x) {
-#error TODO: Return 1 when x is between 0x30 and 0x39 inclusive.
+  //0x30 == 01010000 ~  01011001 = 0x39
+  //emm......
+  return (!((0x30 & x) ^ 0x30)) & !((x & 0xFFFFFF00) ^ 0) & !(!((0x8 & x) ^ 0x8) & (!((0x4 & x) ^ 0x4) | !((0x2 & x) ^ 0x2)));
 }
 
 int main(void) {
