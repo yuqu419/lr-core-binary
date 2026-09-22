@@ -9,7 +9,7 @@
  */
 int isLessOrEqual(int x, int y)
 {
-  return (((x >> 31) ^ (y >> 31) + 0xFFFFFFFF) & !((y + (~x) + 1) >> 31 & 0xFFFFFFFF)) | (~((x >> 31) ^ (y >> 31) + 0xFFFFFFFF) & !((y >> 31) & 1) & ((x >> 31) & 1));
+  return ((((x >> 31) ^ (y >> 31)) + 0xFFFFFFFF) & !((y + (~x) + 1) >> 31 & 0xFFFFFFFF)) | (~(((x >> 31) ^ (y >> 31)) + 0xFFFFFFFF) & !((y >> 31) & 1) & ((x >> 31) & 1));
 }
 
 int main(void)
