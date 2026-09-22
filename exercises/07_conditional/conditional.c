@@ -8,8 +8,7 @@
  *   Rating: 3
  */
 int conditional(int x, int y, int z) {
-  int operator = ~((!(x ^ 0)) + 0xFFFFFFFF);
-  return (~operator & y) | (operator & z);
+  return (!x + 0xFFFFFFFF & y) | (~(!x + 0xFFFFFFFF) & z);
 }
 
 int main(void) {
